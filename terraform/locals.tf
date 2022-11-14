@@ -1,13 +1,13 @@
 locals {
   region = var.aws_region
   ecr_defaults = {
-    repository_name = "app-registry"
+    repository_name = "ecr-tprepo"
   }
   ecr = merge(local.ecr_defaults, var.ecr_values)
 
   ecs_defaults = {
-    cluster_name = "ecs-cluster"
-    service_name = "ecs-service"
+    cluster_name = "ecs-tpcluster"
+    service_name = "ecs-tpservice"
   }
   ecs = merge(local.ecs_defaults, var.ecs_values)
 
